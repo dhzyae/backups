@@ -1,0 +1,27 @@
+<!--pages/sendMoment/sendMoment.wxml-->
+<view class="container">
+
+    <text class="title">分享歌曲</text>
+    <view class="input">
+        <label for="content">分享内容：</label>
+        <input type="text" id="content" name="content" model:value="{{ content }}" placeholder="请输入内容" bindinput="fakeCallback"/>
+    </view>
+    <view class="input">
+        <label for="singer">歌手名：</label>
+        <input type="text" id="singer" name="singer" model:value="{{ singer }}" placeholder="请输入歌手名" bindinput="fakeCallback"/>
+    </view>
+    <view class="input">
+        <label for="song-title">歌曲名：</label>
+        <input type="text" id="song-title" name="title" model:value="{{ title }}" placeholder="请输入歌曲名称" bindinput="fakeCallback"/>
+    </view>
+    <view class="chooseImg" bindtap="chooseImg">
+        <view>
+            <image mode="widthFix" src="/static/images/upImg.png"></image>
+        </view>
+        <view>
+            <text>上传歌曲封面</text>
+        </view>
+    </view>
+    <button bindtap="sendMoment" class="send-btn" type="primary">提交</button>
+
+</view>

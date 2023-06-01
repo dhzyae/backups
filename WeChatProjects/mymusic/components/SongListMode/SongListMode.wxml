@@ -1,0 +1,30 @@
+<!--components/SongListMode/SongListMode.wxml-->
+<view class='toast-box'>
+
+  <view class='toastbg'></view>
+
+  <view class='showToast'>
+    <view class='toast-title'>
+      <view class="text1"><text>收藏歌曲到歌单</text></view>
+      <view class='button1'>
+        <button type="warn" size="mini" catchtap='cancel'>取消</button>
+      </view>
+    </view>
+
+    <view class="list-content">
+      <view class="list-items" wx:for="{{musicLibrary}}" wx:key="songListId">
+
+        <view class="song-list" bindtap="addSong" data-songList="{{item}}">
+            <view class="item-img">
+                <image src="/static/images/ftm.jpg"></image>
+            </view>
+            <view class="item-title">
+                <text>{{item.songListTitle}}</text>
+            </view>
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+</view>

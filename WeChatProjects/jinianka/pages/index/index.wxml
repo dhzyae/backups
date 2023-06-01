@@ -1,0 +1,36 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <view class="nav">
+    <image class="title" mode="aspectFit" src="../../static/images/title.png"></image>
+  </view>
+  <view class="main">
+    <view class="wrapper">
+      <view class="nav-bar">
+        <image mode="aspectFit" src="../../static/images/nav_bar.png"></image>
+      </view>
+      <view class="user-info">
+        <view class="phone-number">
+          <text>186****0923</text>
+          <text>的动态行程卡</text>
+        </view>
+        <view class="now-time">
+          <text>更新于：</text>
+          <text>2022.12.10 22:11:18</text>
+        </view>
+        <view class="xck">
+          <image mode="aspectFit" src="../../static/images/xck.gif"></image>
+        </view>
+        <view class="line"><view></view></view>
+        <view class="address">
+          <view class="txt">
+            <text class="t1">您于前7天内到达或途径：</text>
+            <text class="t2">湖南省长沙市，河北省秦皇岛市</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <image mode="aspectFit" src="../../static/images/footer.png"></image>
+  </view>
+</view>

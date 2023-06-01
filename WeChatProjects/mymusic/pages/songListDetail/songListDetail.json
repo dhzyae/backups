@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "song-list-mode": "/components/SongListMode/SongListMode"
+  }
+}

@@ -1,0 +1,67 @@
+/* pages/index/index.wxss */
+
+/*头部封面*/
+.cover image {
+    width: 100%;
+    height: 450rpx;
+}
+
+.momentItem {
+    margin-top: 20rpx;
+}
+
+.momentItem .userItem {
+    position: relative;
+    margin-left: 30rpx;
+}
+
+.momentItem .userItem image {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50rpx;
+}
+
+/*moment item*/
+.momentItem {
+    padding-bottom: 26rpx;
+    border-bottom: 1px solid #d9d7d7;
+}
+
+.momentItem .userItem text {
+    position: absolute;
+    top: 20rpx;
+    left: 96rpx;
+    color: rgb(0, 165, 241);
+}
+
+.momentItem .contentItem {
+    margin-left: 120rpx;
+}
+
+.musicItem {
+    width: 520rpx;
+    display: flex;
+    margin-top: 10rpx;
+    background: #c7c3c3;
+    border-radius: 20rpx;
+    padding: 10rpx 0 3rpx 10rpx;
+}
+
+.musicItem image {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 10rpx;
+}
+
+.songInfo {
+    display: flex;
+    flex-direction: column;
+    font-size: 26rpx;
+    margin-left: 8rpx;
+}
+
+.songInfo .singer {
+    margin-top: 13rpx;
+}
+
+

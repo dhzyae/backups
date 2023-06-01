@@ -1,0 +1,68 @@
+/**index.wxss**/
+
+.nav {
+  padding-bottom: -10rpx;
+  margin-bottom: -10rpx;
+}
+
+.nav image {
+  width: 100%;
+  height: 230rpx;
+}
+
+/* 头部 */
+.header {
+  background-image: url(https://6d6f-mouse-7gwvffrr130abba3-1314726912.tcb.qcloud.la/header_img.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 423rpx;
+  text-align: center;
+}
+
+.title {
+  padding-top: 58rpx;
+  font-family: "SimSun";
+  color: blanchedalmond;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.title-text {
+  padding: 10rpx;
+  background-image: linear-gradient(to bottom , rgba(255, 0, 0, 0.6), rgba(94, 0, 0, 0.1));
+}
+
+.day-text {
+  font-size: 28px;
+  color: #ffd700;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.time-text {
+  font-family: 'SimSun';
+  font-size: 26px;
+  font-weight: 900;
+  color: #ffd700;
+}
+
+/* 视频 */
+.main video {
+  width: 100%;
+  border-top: 23rpx solid #ffd700;
+  border-bottom: 26rpx solid #ffd700;
+}
+
+
+/* 脚部 */
+.footer {
+  width: 100%;
+  height: 600rpx;
+  margin-top: -16rpx;
+}
+
+.footer image {
+  width: 100%;
+  height: 100%;
+}

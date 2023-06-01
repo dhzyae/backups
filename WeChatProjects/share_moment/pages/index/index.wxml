@@ -1,0 +1,59 @@
+<!--pages/index/index.wxml-->
+<view class="momentContainer">
+
+<view class="cover">
+    <image bindtap="toSendMomentPage" src="/static/images/bg.jpg"></image>
+</view>
+
+<view class="momentItem">
+    <view class="userItem">
+        <image src="/static/images/nvsheng.jpg"></image>
+        <text>这是一个NickName</text>
+    </view>
+    <view class="contentItem">
+        <text>分享一首歌曲</text>
+        <view>
+            <view class="musicItem">
+                <view class="songImg">
+                    <image src="/static/images/ftm.jpg"></image>
+                </view>
+                <view class="songInfo">
+                    <view class="songName">
+                        <text>佛系少女</text>
+                    </view>
+                    <view class="singer">
+                        <text>冯提莫</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="momentItem" wx:for="{{moments}}" wx:key="id">
+    <view class="userItem">
+        <image src="/static/images/nvsheng.jpg"></image>
+        <text>{{ item.username }}</text>
+    </view>
+    <view class="contentItem">
+        <text>{{ item.detail_text }}</text>
+        <view>
+            <view class="musicItem">
+                <view class="songImg">
+                    <image src="{{ item.img_url }}"></image>
+                </view>
+                <view class="songInfo">
+                    <view class="songName">
+                        <text>{{ item.song_title }}</text>
+                    </view>
+                    <view class="singer">
+                        <text>{{ item.singer }}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+</view>
+

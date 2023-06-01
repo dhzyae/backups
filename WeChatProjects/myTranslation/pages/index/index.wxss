@@ -1,0 +1,85 @@
+/* pages/index/index.wxss */
+.search {
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 24rpx 0 24rpx;
+  justify-content: space-between;
+}
+
+.search .search-input {
+  width: 78%;
+  height: 66rpx;
+  padding-left: 20rpx;
+  padding-top: 10rpx;
+  background-color: aliceblue;
+  border-radius: 16rpx;
+  box-sizing: border-box;
+}
+
+.list-item{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-list {
+  margin: 0 20rpx 0 20rpx;
+  border-radius: 16rpx;
+  background: aliceblue;
+}
+
+.search-result-text {
+  padding: 4rpx 0 4rpx 0;
+  font-size: 36rpx;
+  text-align: center;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.list-item-touch-active .result-item {
+  margin-left: -100rpx;
+}
+.list-item-touch-active .result-item, .list-item-touch-active .item-remove {
+  -webkit-transform: translateX(0) !important;
+  transform: translateX(0) !important;
+}
+
+.item-remove{
+  width: 100rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: red;
+  color: #fff;
+  font-size: 32rpx;
+  -webkit-transform: translateX(180rpx);
+  transform: translateX(180rpx);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.result-item {
+  width: 100%;
+  padding: 12rpx;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(180rpx);
+  transform: translateX(180rpx); 
+  margin-left: -180rpx;
+}
+
+.result-item .add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 30rpx;
+}
+
+.result-item .add-button image {
+  width: 40rpx;
+  height: 40rpx;
+}

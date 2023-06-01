@@ -1,0 +1,72 @@
+<!--pages/songDetail/songDetail.wxml-->
+<view class="songDetailContainer">
+    <!--<view class="circle"></view>
+    <image class="needle {{isPlay ? 'needleRotate' : ''}}" src="/static/images/song/needle.png"/>-->
+
+    <view class="discContainer">
+        <image class="disc" src="{{song.al.picUrl}}"/>
+    </view>
+
+    <view class="musicInfo">
+        <view class="content">
+            <view class="title">{{song.name}}</view>
+            <view class="author">{{song.ar[0].name}}</view>
+        </view>
+        <view bindtap="showMoreMode" class="moreOperations">~~</view>
+    </view>
+
+
+<!--    进度条控制区域-->
+    <view class="progressControl">
+        <text>{{currentTime}}</text>
+<!--        总的进度条-->
+        <view class="barControl">
+<!--            实时进度条-->
+            <view class="audio-currentTime-Bar" style="width: {{currentWidth + 'rpx'}}">
+<!--                小圆球-->
+                <view class="audio-circle"></view>
+            </view>
+        </view>
+        <text>{{durationTime}}</text>
+    </view>
+
+<!--    底部控制播放区域-->
+    <view class="musicControl">
+        <text class="iconfont icon-iconsMusicyemianbofangmoshiShuffle"></text>
+
+        <text class="iconfont icon-shangyishou" id="pre" bindtap="handleSwitch"></text>
+
+        <text class="iconfont {{isPlay ? 'icon-zanting' : 'icon-bofang'}} big" bindtap="handleMusicPlay"></text>
+
+        <text class="iconfont icon-next" id="next" bindtap="handleSwitch"></text>
+
+        <text class="iconfont icon-iconsMusicyemianbofangmoshiPlayList"></text>
+    </view>
+    <block wx:if="{{isShowConfirm}}">
+      <song-list-mode bind:cancel="cancel" bindaddSong="addSong" />
+    </block>
+
+    <block wx:if="{{isShowMode}}">
+      <view class='toast-box'>
+        <view class='toastbg'></view>
+        <view class='showToast'>
+            <view class='toast-title'>
+                <text>分享歌曲</text>
+            </view>
+            <view class='toast-main'>
+                <view class='toast-input'>
+                    <input type='text' placeholder='请输入要分享的内容' bindinput='setValue' data-name='stuEidtName'></input>
+                </view>
+            </view>
+            <view class='toast-button'>
+                <view class='button1'>
+                    <button catchtap='cancel'>取消</button>
+                </view>
+                <view class='button2'>
+                    <button data-url="../allOrder/allOrder" catchtap='sendMoment'>发送</button>
+                </view>
+            </view>
+        </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view id="body">
+  <view class="nav">
+    <image src="https://6d6f-mouse-7gwvffrr130abba3-1314726912.tcb.qcloud.la/nav_img.png"></image>
+  </view>
+  <view class="header">
+    <view class="title"><text class="title-text">2023年春节倒计时</text></view>
+    <view class="day-text">{{ countdown.d }} 天</view>
+    <view>
+      <text class="time-text">{{ countdown.h }}时 </text>
+      <text class="time-text">{{ countdown.m }}分 </text>
+      <text class="time-text">{{ countdown.s }}秒 </text>
+    </view>
+  </view>
+  <view class="main">
+    <video src="https://6d6f-mouse-7gwvffrr130abba3-1314726912.tcb.qcloud.la/video/video1.mp4" controls="{{false}}" autoplay="{{true}}" loop="{{true}}"></video>
+  </view>
+  <view class="fade"></view>
+  <view class="footer">
+    <image mode="aspectFit" src="https://6d6f-mouse-7gwvffrr130abba3-1314726912.tcb.qcloud.la/footer_img.gif" mode="aspectFill"></image>
+  </view>
+</view>

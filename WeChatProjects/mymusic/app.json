@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/moment/moment",
+    "pages/login/login",
+    "pages/search/search",
+    "pages/recommendSong/recommendSong",
+    "pages/songDetail/songDetail",
+    "pages/personal/personal",
+    "pages/musicGallery/musicGallery",
+    "pages/register/register",
+    "pages/songListDetail/songListDetail",
+    "components/SongListMode/SongListMode",
+    "pages/hotList/hotList"
+  ],
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#d43c33",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/images/tabs/tab_index.png",
+        "selectedIconPath": "/static/images/tabs/tab_index_act.png"
+      },
+      {
+        "pagePath": "pages/musicGallery/musicGallery",
+        "text": "音乐库",
+        "iconPath": "/static/images/tabs/tab_index.png",
+        "selectedIconPath": "/static/images/tabs/tab_index_act.png"
+      },
+      {
+        "pagePath": "pages/moment/moment",
+        "text": "动态",
+        "iconPath": "/static/images/tabs/tab_video.png",
+        "selectedIconPath": "/static/images/tabs/tab_video_act.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人",
+        "iconPath": "/static/images/tabs/tab_user.png",
+        "selectedIconPath": "/static/images/tabs/tab_user_act.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#87CEFA",
+    "navigationBarTitleText": "一个没有名字的音乐应用",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": [
+    "audio"
+  ]
+}

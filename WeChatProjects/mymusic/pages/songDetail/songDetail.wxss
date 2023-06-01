@@ -1,0 +1,247 @@
+/* pages/songDetail/songDetail.wxss */
+.songDetailContainer {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.circle {
+    position: relative;
+    z-index: 100;
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    background: #fff;
+    margin: 10rpx 0;
+}
+/*摇杆*/
+.needle {
+    position: relative;
+    z-index: 99;
+    top: -40rpx;
+    left: 60rpx;
+    width: 200rpx;
+    height: 274rpx;
+    transform-origin: 40rpx 0;
+    transform: rotate(-20deg);
+    transition: transform 1s;
+}
+
+.needleRotate {
+    transform: rotate(0deg);
+}
+.discContainer {
+    display: flex;
+    margin-top: 100rpx;
+    margin-bottom: 150rpx;
+    width: 598rpx;
+    height: 598rpx;
+}
+.disc {
+    border-radius: 15rpx;
+    width: 598rpx;
+    height: 598rpx;
+}
+/*歌曲信息*/
+.musicInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.musicInfo .content {
+    padding-left: 60rpx;
+    margin-bottom: 6rpx;
+}
+.musicInfo .content .title {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.musicInfo .content .author {
+    color: rgb(255, 255, 255, 0.6);
+}
+.moreOperations {
+    color: #FFFFFF;
+    padding-right: 60rpx;
+}
+.musicImg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 370rpx;
+    height:370rpx;
+    border-radius: 50%;
+}
+
+/*底部控制区域*/
+.musicControl {
+    position: absolute;
+    bottom: 40rpx;
+    left: 0;
+    border-top: 1rpx solid #ffffff;
+    width: 100%;
+    display: flex;
+}
+
+.musicControl text {
+    width: 20%;
+    height: 120rpx;
+    line-height: 120rpx;
+    text-align: center;
+    color: #ffffff;
+    font-size: 50rpx;
+}
+
+.musicControl text.big {
+    font-size: 80rpx;
+}
+
+/*进度条控制区域*/
+.progressControl {
+    position: absolute;
+    bottom: 400rpx;
+    width: 640rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+}
+
+.barControl {
+    position: relative;
+    width: 450rpx;
+    height: 4rpx;
+    background: rgba(0, 0, 0, 0.4);
+    margin: auto;
+}
+
+.audio-currentTime-Bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4rpx;
+    z-index: 1;
+    background: red;
+}
+
+/*小圆球*/
+.audio-circle {
+    position: absolute;
+    right: -12rpx;
+    top: -4rpx;
+    width: 12rpx;
+    height: 12rpx;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+/*弹出框*/
+.toast-box {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+
+.toastbg {
+  opacity: 0.2;
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.showToast {
+  position: absolute;
+  opacity: 1;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 40%;
+}
+
+.toast-title {
+  padding-left: 5%;
+  background-color: #2196f3;
+  color: white;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border-top-right-radius: 16rpx;
+  border-top-left-radius: 16rpx;
+}
+
+.toast-main {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: white;
+  text-align: center;
+}
+
+.toast-input {
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid #ddd;
+  border-radius: 20rpx;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.toast-button {
+  display: flex;
+}
+
+.button1 {
+  width: 50%;
+}
+
+.button2 {
+  width: 50%;
+}
+
+.button1 button {
+  width: 100%;
+  background-color: white;
+  color: red;
+  border-radius: 0px;
+  border-bottom-left-radius: 16rpx;
+}
+
+.button2 button{
+  width: 100%;
+  background-color: white;
+  color: black;
+  border-radius: 0px;
+  border-bottom-right-radius: 16rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

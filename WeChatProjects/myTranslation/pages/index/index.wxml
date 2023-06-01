@@ -1,0 +1,51 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search">
+    <view class="search-input">
+      <input type="text" bindinput="setValue"/>
+    </view>
+    <view class="search-button">
+      <button bindtap="search" size="mini" type="primary">搜索</button>
+    </view>
+  </view>
+  <!-- 搜索列表 -->
+  <view class="result-list" hidden="{{ isShowResult }}">
+    <view class="search-result-text">
+      <text>搜索结果</text>
+    </view>
+    <view class="result-item" wx:for="{{queryList}}" wx:key="index">
+      <view class="query-data">
+        <view class="query-text">
+          <text>{{item.query}}</text>
+        </view>
+        <view class="translation-text">
+          <text>{{item.translation}}</text>
+        </view>
+      </view>
+      <view class="add-button" bindtap="addWord" data-words="{{item}}">
+        <image src="/static/images/add_button.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 添加到列表的单词 -->
+  <view class="result-list" hidden="{{ isShowMyWords }}">
+    <view class="list-item {{user.isTouchMove?'list-item-touch-active':''}}" data-index="{{index}}" wx:for="{{myWordsList}}" wx:key="index" data-words="{{item}}" bindlongpress="removeWords" bindtap="playSound">
+      <view class="result-item">
+        <view class="query-data">
+          <view class="query-text">
+            <text>{{item.query}}</text>
+          </view>
+          <view class="translation-text">
+            <text>{{item.translation}}</text>
+          </view>
+        </view>
+        <view class="add-button">
+          <image src="/static/images/sound.png"></image>
+        </view>
+      </view>
+      <view class="item-remove">删除</view>
+    </view>
+  </view>
+</view>

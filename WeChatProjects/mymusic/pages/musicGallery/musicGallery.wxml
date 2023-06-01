@@ -1,0 +1,81 @@
+<!--pages/searchList/searchList.wxml-->
+<view class="search-list">
+    <view class="content">
+
+        <view class="personal-info">
+            <view class="avatar">
+                <image src="{{userInfo.avatarUrl?userInfo.avatarUrl:'/static/images/personal/missing-face.png'}}"></image>
+            </view>
+            <view class="user">
+                <view class="nickname">
+                    <text>{{userInfo.username?userInfo.username: '游客'}}</text>
+                </view>
+            </view>
+        </view>
+
+        <!--我喜欢的音乐-->
+        <view class="list-content">
+            <view class="list-title">
+                <view><text>我喜欢的音乐</text></view>
+                <!--<view bindtap="addButton"><text style="font-size: 40rpx;">+</text></view>-->
+            </view>
+
+            <view class="list-items">
+
+                <view class="song-list" bindtap="toLikeList">
+                    <view class="item-img">
+                        <image src="/static/images/ftm.jpg"></image>
+                    </view>
+                    <view class="item-title">
+                        <text>我喜欢的音乐</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <!--我创建的歌单-->
+        <view class="list-content">
+            <view class="list-title">
+                <view><text>创建歌单</text></view>
+                <view bindtap="addButton"><text style="font-size: 40rpx;">+</text></view>
+            </view>
+            <view class="list-items" wx:for="{{musicLibrary}}" wx:key="songListId">
+
+                <view class="song-list" bindtap="toListDetail" bindlongpress="toDelete" data-songList="{{item}}">
+                    <view class="item-img">
+                        <image src="/static/images/ftm.jpg"></image>
+                    </view>
+                    <view class="item-title">
+                        <text>{{item.songListTitle}}</text>
+                    </view>
+                </view>
+
+            </view>
+        </view>
+
+    </view>
+
+    <block wx:if="{{isShowConfirm}}">
+      <view class='toast-box'>
+        <view class='toastbg'></view>
+        <view class='showToast'>
+            <view class='toast-title'>
+                <text>添加歌单</text>
+            </view>
+            <view class='toast-main'>
+                <view class='toast-input'>
+                    <input type='text' placeholder='请输入歌单名称' bindinput='setValue' data-name='stuEidtName'></input>
+                </view>
+            </view>
+            <view class='toast-button'>
+                <view class='button1'>
+                    <button catchtap='cancel'>取消</button>
+                </view>
+                <view class='button2'>
+                    <button data-url="../allOrder/allOrder" catchtap='confirmAcceptance'>确定</button>
+                </view>
+            </view>
+        </view>
+    </view>
+  </block>
+</view>

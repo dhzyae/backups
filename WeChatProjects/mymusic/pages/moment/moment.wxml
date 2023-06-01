@@ -1,0 +1,59 @@
+<!--pages/index/index.wxml-->
+<view class="momentContainer">
+
+<view class="cover">
+    <image bindtap="toSendMomentPage" src="/static/images/bg.jpg"></image>
+</view>
+
+<view class="momentItem">
+    <view class="userItem">
+        <image src="/static/images/tx.jpg"></image>
+        <text style="color: rgb(190, 108, 0);">胖胖的董浩叔叔</text>
+    </view>
+    <view class="contentItem">
+        <text>分享一首歌曲</text>
+        <view>
+            <view class="musicItem">
+                <view class="songImg">
+                    <image src="/static/images/ftm.jpg"></image>
+                </view>
+                <view class="songInfo">
+                    <view class="songName">
+                        <text>佛系少女</text>
+                    </view>
+                    <view class="singer">
+                        <text>冯提莫</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="momentItem" wx:for="{{moments}}" wx:key="momentId">
+    <view class="userItem">
+        <image src="{{item.avatarUrl}}"></image>
+        <text>{{ item.username }}</text>
+    </view>
+    <view class="contentItem">
+        <text>{{ item.content === "" ? "分享了一首歌曲" : item.content }}</text>
+        <view>
+            <view class="musicItem">
+                <view class="songImg">
+                    <image src="{{ item.songImgUrl }}"></image>
+                </view>
+                <view class="songInfo">
+                    <view class="songName">
+                        <text>{{ item.songTitle }}</text>
+                    </view>
+                    <view class="singer">
+                        <text>{{ item.songAuthor }}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+</view>
+
