@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>购物车</title>
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/shop.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_3007983_j8moebtrhrm.css">
+
+  <!-- 引入vue -->
+  <script src="../js/vue.js"></script>
+  <!-- 引入axios -->
+  <script src="../js/axios.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 顶部 -->
+    <div id="top-box">
+      <div class="container">
+        
+        <div class="top-user fr">
+          
+          <a href="./register.html" class="fl register-btn">注册</a>
+          <a href="javascript:;" class="username fl"></a>
+          <div class="fl icon-box">
+            <a href="./login.html" class="shopping-btn">
+              <i class="icon"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 导航及轮播图 -->
+    <div id="head">
+      <div class="header-box container">
+        <div class="col-lg-6 fl">
+          <a href="javascript:;" class="logo"></a>
+          <a href="javascript:;" class="nav-item">购物车</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 主体 -->
+    <div id="main">
+      <div class="container">
+        <div class="empty" style="display: block;">
+          <div class="empty-cart">
+            <img src="https://p.ssl.qhimg.com/t019eb2016764d86089.png" alt="">
+            <p>您的购物车居然是空的</p>
+            <a href="../html/index.html">去逛逛</a>
+          </div>
+        </div>
+
+        <div class="shopping" style="display: none;">
+          <div class="top-box">
+            <div class="col-1">
+              <!-- <input type="checkbox" class="allcheck">
+              <span>全选</span> -->
+            </div>
+            
+            <div class="col-2">
+              商品
+            </div>
+            <div class="col-3"></div>
+            <div class="col-4">单价</div>
+            <div class="col-5">数量</div>
+            <div class="col-6">小计</div>
+            <div class="col-7">操作</div>
+          </div>
+
+          <div class="table-header">
+            360商城自营
+            <span class="coupon"></span>
+          </div>
+
+          <div class="shopping-items">
+            <div class="item" v-for="sp,i in cars" :key="i">
+              <div class="col-1">
+                <span>{{i+1}}</span>
+                <!-- <input type="checkbox" class="checkbox"> -->
+              </div>
+              <div class="col-2 good-info">
+                <img :src="sp.pimg" alt="">
+                <!-- <a href="javascript:;">360 WiFi6 全屋路由V6 单只装</a> -->
+                <a href="javascript:;">{{sp.pname}}</a>
+              </div>
+              <!-- <div class="col-3 good-type">分类:单只装</div> -->
+              <div class="col-3 good-type"></div>
+              <div class="col-4 single-price">¥{{sp.price}}</div>
+              <div class="col-5 good-num">
+                <div class="box">
+                  <a href="javascript:;" @click="sub(i)">-</a>
+                  <input type="text" :value="sp.pnum" max="" min="1">
+                  <a href="javascript:;" @click="add(i)">+</a>
+                </div>
+              </div>
+              <div class="col-6 all-price">¥{{sp.pxj}}</div>
+              <div class="col-7 delete">
+                <a href="javascript:;" @click="gobuy(sp.pid,sp.pnum)">结算</a>
+                <a href="javascript:;" style="margin-left: 10px;" @click="del(i)">删除</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-box">
+            <div class="col-1 fl">
+              <!-- <input type="checkbox" class="allcheck" @click='checked(1)'>
+              <span>全选</span> -->
+            </div>
+            <!-- <a href="javascript:;" class="delete-checked fl">删除选中商品</a> -->
+
+            <a href="javascript:;" class="pay fr" @click="gobuyall()">去结算</a>
+
+            <div class="checkedgoods-info fr">
+              <p class="row-1">
+                <span class="goods-num">{{sum}}件</span>商品
+                <b>合计：¥<span class="goods-price">{{sprice}}</span></b>
+              </p>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- 右侧边栏 -->
+      <div id="right-aside">
+        <div class="middle">
+          <a href="javascript:;" class="wechat">
+            <span class="icon"></span>
+            <div class="hover-img">
+              <div class="wechat-qrcode"></div>
+              <p>关注公众号</p>
+            </div>
+          </a>
+        </div>
+        <div class="bottom">
+          <a href="javascript:;" class="qrcode">
+           
+            <div class="click-img" style="display: none;">
+              <img src="	https://p5.ssl.qhimg.com/t01f74c5c76d0fad490.png" alt="">
+              
+            </div>
+          </a>
+          <a href="javascript:;" class="back-top">
+            <span class="icon"></span>
+            <div class="hover-img">返回顶部</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- 页面底部 -->
+    <div id="footer" style="position: relative;">
+      <div class="footer-top">
+        <div class="container">
+          <div class="about box col-lg-4">
+            <h2>关于商城</h2>
+            <p class="text">
+              360商城是奇虎360公司的官方电商平台，主要经营360安全智能设备，以及相关领域消费品。提供最新的360智能设备，最贴心的售后服务，360社区一手评测资讯，享受360安全、安心、放心的购物体验。</p>
+            <div class="icon-box">
+              <span>关于我们</span>
+              <span class="icon-wechat">
+                <span class="hover-img text-center">
+                  <img src="../images/wechat.png">
+                </span>
+              </span>
+              <a href="javascript:;" class="icon-sina">
+                <span class="hover-img text-center">
+                  <img src="../images/wechat.png">
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="help box col-lg-5">
+            <div class="help-1 fl">
+              <h2>售后服务</h2>
+              <a href="javascript:;" class="text">7日无理由退货</a>
+            </div>
+            <div class="help-2 fl">
+              <h2>帮助中心</h2>
+              <a href="./register.html" class="text">用户注册</a>
+            </div>
+          </div>
+          <div class="contact box col-lg-3">
+            <h2 class="text-center">联系我们</h2>
+            <p class="phone">400-6822-360</p>
+            <p class="work-time">周一至周日 9:00-18:00（仅收市话费）</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="service-list col-lg-12">
+            <a href="javascript:;">
+              <span class="icon-return"></span>
+              7天无理由退货
+            </a>
+            <a href="javascript:;">
+              <span class="icon-exchange"></span>
+              15天免费换货
+            </a>
+            <a href="javascript:;">
+              <span class="icon-package"></span>
+              满99元包邮
+            </a>
+          </div>
+          <div class="copyright-line col-lg-12">
+            <p>©2019-2021 mall.360.cn版权所有</p>
+            <p>
+              <a href="javascript:;">京ICP备08010314号-6</a>
+              <a href="javascript:;">营业执照</a>
+            </p>
+            <p>
+              公司名称：北京视觉世界科技有限公司 | 社会统一信用代码：91110105336460203N | 食品经营许可证<br>
+              公司地址：北京市朝阳区酒仙桥路6号院2号楼1至17层102号内5层501 | 联系方式：400-6822-360
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    var v = new Vue({
+      el: "#app",
+      data: {
+        // 用户名
+        user: "",
+        shoppro: {
+          pid: 0,
+          pname: "",
+          price: 0,
+          pnum: 0,
+          pimg: "",
+          pxj: 0
+        },
+        // 用户购物车数组
+        cars: [],
+        // 购物车商品信息
+        sum: 0,
+        sprice: 0
+
+      },
+      mounted () {
+        // 获取登录用户
+        this.init_user();
+        // console.log("user:" + this.user);
+        // 获取用户购物车(pid,pnum)
+        this.init_car();
+        // console.log("pid,pnum:")
+        console.log(this.cars);
+        // 是否显示购物车商品列表
+        this.init_shoppng();
+        //商品所有信息
+        axios.get("json/shop.json").then(a => {
+          var pros = a.data;
+          for (c of this.cars) {
+            // var car = this.cars[i];
+            // console.log(car.pid);
+            for (pro of pros) {
+              // var pro = pros[j];
+              if (c.pid == pro.pid) {
+                c.pname = pro.pname;
+                c.pimg = pro.pimgsrc;
+                c.price = pro.price;
+                c.pxj = c.pnum * c.price;
+                // 初始化购物车总金额(sprice)
+                this.sprice += c.pxj;
+              }
+            }
+          }
+        })
+        // 初始化购物车信息
+        this.init_carinfo();
+
+      },
+      methods: {
+        // 获得登录用户
+        init_user () {
+          var arr = eval(localStorage.user);
+          // console.log(arr);
+          for (let i = 0; i < arr.length; i++) {
+            const u = arr[i];
+            if (u.msg) {
+              this.user = u.username;
+              return;
+            }
+          }
+
+        },
+        // 获取登录用户的购物车信息
+        init_car () {
+          // [{user:"admin",goods:[{pid:001,ptype:"16GB",pnum:10}]},{user:"admin2",goods:[{pid:002,ptype:"124GB",pnum:20}]}]
+          var carsArray = eval(localStorage.userGoodsCar);//返回的数组
+          var name = this.user;
+          for (let i = 0; i < carsArray.length; i++) {
+            var e = carsArray[i];
+            if (e.username == this.user) {
+              for (let j = 0; j < e.goodsCar.length; j++) {
+                this.shoppro.pid = Number(e.goodsCar[j].pid);
+                this.shoppro.pnum = Number(e.goodsCar[j].pnum);
+                this.cars.push(this.shoppro);
+                this.shoppro = {}
+              }
+            }
+          }
+        },
+        // 控制商品信息是否显示
+        init_shoppng () {
+          if (this.cars.length > 0) {
+            document.getElementsByClassName("empty")[0].style.display = "none";
+            document.getElementsByClassName("shopping")[0].style.display = "block";
+          }
+        },
+        // // 全选(功能删除)
+        // checked (i) {
+        //   var allcb = document.getElementsByClassName('allcheck');
+        //   var cbs = document.getElementsByClassName('checkbox');
+        //   if (allcb[i].checked) {
+        //     // 设置选择
+        //     for (let i = 0; i < allcb.length; i++) {
+        //       var acb = allcb[i];
+        //       acb.checked = 'checked';
+        //     }
+        //     for (let i = 0; i < cbs.length; i++) {
+        //       var cb = cbs[i];
+        //       cb.checked = "checked";
+        //     }
+        //   }
+        //   else {
+        //     // 取消选择
+        //     for (let i = 0; i < allcb.length; i++) {
+        //       var acb = allcb[i];
+        //       acb.checked = null;
+        //     }
+        //     for (let i = 0; i < cbs.length; i++) {
+        //       var cb = cbs[i];
+        //       cb.checked = null;
+        //     }
+        //   }
+        // console.log("0:" + allcb[0].checked);
+        // console.log("1:" + allcb[1].checked);
+
+        // },
+
+        // 商品删除
+        del (i) {
+          this.cars.splice(i, 1);
+          var carsArray = eval(localStorage.userGoodsCar);
+          for (let i = 0; i < carsArray.length; i++) {
+            var e = carsArray[i];
+            if (e.username == this.user) {
+              e.goodsCar = this.cars;
+            }
+          }
+          localStorage.setItem("userGoodsCar", JSON.stringify(carsArray));
+
+        },
+
+        // 删除选中商品(有问题功能删除)
+        del_checked () {
+          var cbs = document.getElementsByClassName('checkbox');
+          var arr = [];
+          for (var i = 0; i < cbs.length; i++) {
+            if (cbs[i].checked) {
+              arr.push(i);
+            }
+          }
+          for (var k = 0; k < arr.length; k++) {
+            console.log(arr[k]);
+            this.cars.splice(arr[k], 1);
+          }
+          for (var j = 0; j < cbs.length; j++) {
+            var cb = cbs[j];
+            cb.checked = "";
+          }
+        },
+
+        // 数量加
+        add (i) {
+          this.cars[i].pnum++;
+          this.sum++;
+          this.cars[i].pxj = this.cars[i].pnum * this.cars[i].price;
+          this.sprice += this.cars[i].price;
+
+        },
+        // 数量减
+        sub (i) {
+          this.cars[i].pnum--;
+          this.sum--;
+          this.cars[i].pxj = this.cars[i].pnum * this.cars[i].price;
+          this.sprice -= this.cars[i].price;
+
+        },
+        // 初始化购物车信息(商品总数)
+        init_carinfo () {
+          for (let index = 0; index < this.cars.length; index++) {
+            var e = this.cars[index];
+            this.sum += e.pnum;
+          }
+        },
+
+        // 单个商品结算
+        gobuy (id, num) {
+          window.location = "order.html?[" + id + "," + num + "]";
+        },
+
+        // 所有商品结算
+        gobuyall () {
+          var str = "";
+          for (let i = 0; i < this.cars.length; i++) {
+            var e = this.cars[i];
+            if (i == this.cars.length - 1) {
+              str += "[" + e.pid + "," + e.pnum + "]]";
+            } else {
+              str += "[[" + e.pid + "," + e.pnum + "],";
+            }
+          }
+          window.location = "order.html?" + str;
+        },
+
+
+
+      }
+    })
+  </script>
+
+
+</body>
+
+</html>

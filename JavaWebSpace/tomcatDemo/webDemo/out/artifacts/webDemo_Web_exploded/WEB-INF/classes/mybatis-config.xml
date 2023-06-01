@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <package name="com.mouse.pojo"/>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+<!--                数据库的连接信息jdbc:mysql://localhost:3306/mybatis?useSSL=false&amp;serverTimezone=UTC-->
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis?useSSL=false&amp;serverTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+<!--        加载sql的映射文件-->
+<!--        同志们！看这里，就是这个映射文件！如果有这章最后面那个“注解开发”报错的，就是这个地方！改成User的，不要继续用Brand的了！！！-->
+        <mapper resource="com/mouse/mapper/UserMapper.xml"/>
+        <mapper resource="com/mouse/mapper/BrandMapper.xml"/>
+    </mappers>
+</configuration>

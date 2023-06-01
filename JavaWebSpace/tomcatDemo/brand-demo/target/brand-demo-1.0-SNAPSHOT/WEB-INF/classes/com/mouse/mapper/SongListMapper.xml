@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mouse.mapper.SongListMapper">
+
+    <resultMap id="SongListResultMap" type="com.mouse.pojo.SongList">
+        <result column="song_list_id" property="songListId"/>
+        <result column="user_id" property="userId"/>
+        <result column="song_id" property="songId"/>
+        <result column="song_title" property="songTitle"/>
+        <result column="song_author" property="songAuthor"/>
+        <result column="song_img_url" property="songImgUrl"/>
+    </resultMap>
+
+    <insert id="addSong">
+        INSERT INTO song_list (song_list_id, user_id, song_id, song_title, song_author, song_img_url)
+        VALUES (#{songListId}, #{userId}, #{songId}, #{songTitle}, #{songAuthor}, #{songImgUrl});
+    </insert>
+
+    <delete id="deleteSong">
+        DELETE
+        FROM song_list
+        WHERE song_list_id = #{songListId} AND song_id = #{songId};
+    </delete>
+
+    <select id="searchListDetail" resultMap="SongListResultMap">
+        SELECT * FROM song_list
+        WHERE song_list_id = #{songListId};
+    </select>
+</mapper>

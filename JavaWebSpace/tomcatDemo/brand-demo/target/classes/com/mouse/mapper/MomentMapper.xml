@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mouse.mapper.MomentMapper">
+
+    <resultMap id="MomentResultMap" type="com.mouse.pojo.Moment">
+        <result column="moment_id" property="momentId"/>
+        <result column="user_id" property="userId"/>
+        <result column="avatar_url" property="avatarUrl"/>
+        <result column="song_id" property="songId"/>
+        <result column="song_title" property="songTitle"/>
+        <result column="song_author" property="songAuthor"/>
+        <result column="song_img_url" property="songImgUrl"/>
+    </resultMap>
+
+    <insert id="addMoment">
+        INSERT INTO moment (user_id, username, avatar_url, content, song_title, song_author, song_img_url)
+        VALUES (#{userId}, #{username}, #{avatarUrl}, #{content}, #{songTitle}, #{songAuthor}, #{songImgUrl});
+    </insert>
+
+    <select id="searchAllMoment" resultMap="MomentResultMap">
+        SELECT *
+        FROM moment;
+    </select>
+</mapper>

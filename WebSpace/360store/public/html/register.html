@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/cs.css">
+    <link rel="stylesheet" href="http:////at.alicdn.com/t/font_3007983_xeco302zhbi.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/register.css">
+
+    <script src="../js/vue.js"></script>
+    <script src="../jquery/jquery-3.6.0.js"></script>
+    <script src="../js/element.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div id="head">
+            <div class="wrapper clearfix">
+                <div class="left fl">
+                    <img src="https://p.ssl.qhimg.com/t01a46c936f9a7ffd94.png" alt="" class="logo">
+                    <span></span>
+                    <img src="https://p.ssl.qhimg.com/t01b9e6ac529f79e0ae.png" alt="" class="slogan">
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="main">
+            <div class="wrapper">
+                <div class="sdk fr">
+                    <div class="dialog">
+                        <div class="method">
+                            <a href="javascript:;" class="account-login cur" data-title="phone-register-box">手机号注册</a>
+                        </div>
+
+                        <!-- 手机号注册 -->
+                        <div class="phone-register-box register-box  phone_reg" style="display: block;">
+                            <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" class="demo-ruleForm">
+                                <el-form-item prop="phone">
+                                    <el-input v-model="ruleForm.phone" :maxlength="11" placeholder="手机号" clearable
+                                        prefix-icon="el-icon-phone" autocomplete="off" id="loginName">
+                                    </el-input>
+                                </el-form-item>
+                                <el-form-item prop="pass">
+                                    <el-input v-model="ruleForm.pass" placeholder="设置密码" clearable
+                                        prefix-icon="el-icon-lock" autocomplete="off" type="password" id="loginPsd">
+                                    </el-input>
+                                </el-form-item>
+                                <el-form-item prop="checkPass">
+                                    <el-input v-model="ruleForm.checkPass" placeholder="确认密码" clearable
+                                        prefix-icon="el-icon-lock" autocomplete="off" type="password" id="loginPsd2">
+                                    </el-input>
+                                </el-form-item>
+                                <div class="agree-box">
+                                    
+                                </div>
+                                <el-button type="success" onclick="register()" :disabled="dis">注册</el-button>
+                            </el-form>
+
+
+                            <div class="bottom">
+                                <p>已经有账号？<a href="./login.html">直接登录</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <p>Copyright©2005-2021 360.CN All Rights Reserved 360安全中心</p>
+            <p>
+                <a href="javascript:;">
+                    <img src="https://p.ssl.qhimg.com/t018b891a688f560525.png" alt=""> 京ICP证080047号[京ICP备08010314号-6]
+                </a>
+                <a href="javascript:;">
+                    京公网安备 11000002000006号
+                </a>
+            </p>
+        </div>
+    </div>
+    <script>
+
+        function register () {
+            if (isNone()) {
+                let arr = [];
+                if (localStorage.user) {
+                    arr = eval(localStorage.user);
+                    for (e in arr) {
+
+                        if ($('#loginName').val().trim() == arr[e].username) {
+                            alert('该账号已被注册');
+                            clear();
+                            return;
+                        }
+                    }
+                }
+                const user = {
+                    'username': $("#loginName").val(),
+                    'password': $("#loginPsd").val(),
+                    'msg':false
+                };
+
+                arr.push(user);
+                localStorage.user = JSON.stringify(arr);
+                alert('注册成功');
+                window.location.href = "login.html"
+                clear();
+            }
+        }
+
+
+        function clear () {
+            $('#loginName').val('');
+            $("#loginPsd").val('');
+            $("#loginPsd2").val('');
+        }
+
+
+        function isNone () {
+            if ($('#loginName').val().trim() == "") {
+                alert('用户名不能为空');
+                return false;
+            } else if ($('#loginPsd').val().trim() == "") {
+                alert('密码不能为空');
+                return false;
+            } else if ($('#loginPsd').val().trim() != $('#loginPsd2').val().trim()) {
+                alert('两次密码不一致，请检查！');
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <script>
+        var validatePass = (rule, value, callback) => {
+            if (value === '') {
+                callback(new Error('请输入密码'));
+            } else {
+                if (this.ruleForm.checkPass !== '') {
+                    this.$refs.ruleForm.validateField('checkPass');
+                }
+                callback();
+            }
+        };
+        var validatePass2 = (rule, value, callback) => {
+            if (value === '') {
+                callback(new Error('请再次输入密码'));
+            } else if (value !== this.ruleForm.pass) {
+                callback(new Error('两次输入密码不一致!'));
+            } else {
+                callback();
+            }
+        };
+        let va = new Vue({
+            el: "#app",
+            data () {
+                return {
+                    dis: false,
+                    ruleForm: {
+                        phone: '',
+                        pass: '',
+                        checkPass: '',
+                    },
+                    rules: {
+                        pass: [{
+                            validator: validatePass,
+                            trigger: 'blur'
+                        }],
+                        checkPass: [{
+                            validator: validatePass2,
+                            trigger: 'blur'
+                        }],
+                        phone: [{
+                            required: true,
+                            message: '请输入电话号码',
+                            trigger: 'blur'
+                        }, {
+                            required: true,
+                            pattern: /^((13|14|15|16|17|18)[0-9]{1}\d{8})|((166|199|198)[0-9]{1}\d{7})$/,
+                            message: '请输入正确的电话号码',
+                            trigger: 'blur'
+                        }]
+                    }
+                };
+            },
+            methods: {
+
+            },
+
+        });
+    </script>
+</body>
+
+</html>

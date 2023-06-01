@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="spring_webmvc_test:Web exploded">
+    <output-path>$PROJECT_DIR$/src/main</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="spring_webmvc_test/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="spring_webmvc_test" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

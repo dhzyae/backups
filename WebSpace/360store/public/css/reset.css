@@ -1,0 +1,70 @@
+@charset "utf-8";
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input{
+    margin:0;
+    padding:0;
+}
+body {
+    color: #666;
+    font: 12px "微软雅黑",Verdana,SimHei,"Microsoft JhengHei",Tahoma;
+    position: relative;
+}
+html, body {
+    background: #f0f0f0;
+    min-width: 1260px;
+    overflow: auto;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size:16px;
+    font-weight: normal;
+}
+ul,ol,li{
+    list-style:none;
+}
+a,u{
+    text-decoration: none;
+}
+b,strong{
+    font-weight: normal;
+}
+em,i{
+    font-style:normal;
+}
+img{
+    border:0;
+    display:block;
+    /*清除图片下面的大于3px的间距*/
+}
+img {
+    height: 100%;
+    width: 100%;
+}
+input{
+    outline:none;
+}
+img, input, textarea, button {
+    border: 0;
+    vertical-align: middle;
+}
+.bg_none{
+    background:none!important;/*清除背景*/
+}
+.fl {
+    float: left;
+}
+a {
+    color: #666;
+    outline: none;
+    text-decoration: none;
+}
+
+.clearfix{
+    zoom:1;
+}
+
+.clearfix:after, .clearfix_new:after {
+    clear: both;
+    content: '\20';
+    display: block;
+    height: 0;
+}
+

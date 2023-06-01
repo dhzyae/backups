@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录</title>
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="http:////at.alicdn.com/t/font_3007983_xeco302zhbi.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/cs.css">
+
+  <script src="../js/vue.js"></script>
+  <script src="../jquery/jquery-3.6.0.js"></script>
+  <script src="../js/element.js"></script>
+</head>
+
+<body>
+  <div id="log">
+    <div id="head">
+      <div class="wrapper clearfix">
+        <div class="left fl">
+          <img src="https://p.ssl.qhimg.com/t01a46c936f9a7ffd94.png" alt="" class="logo">
+          <span></span>
+          <img src="https://p.ssl.qhimg.com/t01b9e6ac529f79e0ae.png" alt="" class="slogan">
+        </div>
+
+      </div>
+    </div>
+
+    <div id="main">
+      <div class="wrapper">
+        <div class="sdk fr">
+          <div class="dialog">
+            <div class="method">
+              <a href="javascript:;" class="account-login cur" data-title="account-login-box">手机号登录</a>
+            </div>
+            <!-- 账号登录 -->
+            <div class="account-login-box login-box account_log" style="display: block;">
+              <form action="javascript:;" method="post">
+                <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" class="demo-ruleForm">
+                  <el-form-item prop="phone">
+                    <el-input v-model="ruleForm.phone" :maxlength="11" placeholder="手机号" clearable autocomplete="off"
+                      id="loginName">
+                    </el-input>
+                  </el-form-item>
+                  <el-form-item prop="pass">
+                    <el-input v-model="ruleForm.pass" placeholder="密码" clearable autocomplete="off" type="password"
+                      id="loginPsd"></el-input>
+                  </el-form-item>
+                </el-form>
+                <el-button type="success" style="width: 100%;" onclick="login()">登录</el-button>
+              </form>
+              <div class="bottom">
+                <a href="./register.html">立即注册</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <p>Copyright©2005-2021 360.CN All Rights Reserved 360安全中心</p>
+      <p>
+        <a href="javascript:;">
+          <img src="https://p.ssl.qhimg.com/t018b891a688f560525.png" alt="">
+          京ICP证080047号[京ICP备08010314号-6]
+        </a>
+        <a href="javascript:;">
+          京公网安备 11000002000006号
+        </a>
+      </p>
+    </div>
+  </div>
+  <script>
+    function login () {
+      if (isNone()) {
+        if (localStorage.user) {
+          arr = eval(localStorage.user);
+          let k = 0;
+
+          for (e in arr) {
+            arr[e].msg = "未登录";
+          }
+
+          for (e in arr) {
+
+            if ($("#loginName").val().trim() == arr[e].username) {
+              if ($("#loginPsd").val().trim() == arr[e].password) {
+                arr[e].msg = true;
+                localStorage.user = JSON.stringify(arr);
+                alert("登录成功");
+                window.location.href = "index.html?" + arr[e].username;
+                clear();
+                k = 0;
+
+                return;
+              } else {
+                alert("密码错误");
+                arr[e].msg = false;
+                k = 0;
+                return;
+              }
+            } else {
+              k = 1;
+            }
+          }
+          if (k == 1) {
+            alert("用户名不存在");
+            clear();
+          }
+        } else {
+          alert("用户名不存在，正在跳转到注册页面！");
+          window.location.href = "register.html";
+          clear();
+        }
+      }
+    }
+
+
+    function clear () {
+      $("#loginName").val("");
+      $("#loginPsd").val("");
+    }
+
+
+    function isNone () {
+      if ($("#loginName").val().trim() == "") {
+        alert("用户名不能为空");
+        return false;
+      } else if ($("#loginPsd").val().trim() == "") {
+        alert("密码不能为空");
+        return false;
+      }
+      return true;
+    }
+
+  </script>
+  <script>
+    let v = new Vue({
+      el: "#log",
+      data () {
+        var validatePass = (rule, value, callback) => {
+          if (value === '') {
+            callback(new Error('请输入密码'));
+          } else {
+            if (this.ruleForm.checkPass !== '') {
+              this.$refs.ruleForm.validateField('checkPass');
+            }
+            callback();
+          }
+        };
+        var validatePass2 = (rule, value, callback) => {
+          if (value === '') {
+            callback(new Error('请再次输入密码'));
+          } else if (value !== this.ruleForm.pass) {
+            callback(new Error('两次输入密码不一致!'));
+          } else {
+            callback();
+          }
+        };
+        return {
+          ruleForm: {
+            phone: '',
+            pass: '',
+          },
+          rules: {
+            pass: [
+              { validator: validatePass, trigger: 'blur' }
+            ],
+            checkPass: [
+              { validator: validatePass2, trigger: 'blur' }
+            ],
+            phone: [
+              { required: true, message: '请输入电话号码', trigger: 'blur' },
+              {
+                required: true,
+                pattern: /^((13|14|15|16|17|18)[0-9]{1}\d{8})|((166|199|198)[0-9]{1}\d{7})$/,
+                message: '请输入正确的电话号码',
+                trigger: 'blur'
+              }
+            ]
+          }
+        };
+      },
+    })
+  </script>
+</body>
+
+</html>

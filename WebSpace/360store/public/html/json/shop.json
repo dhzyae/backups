@@ -1,0 +1,554 @@
+[{
+        "pid": 1,
+        "pname": "摄像机",
+        "pinfo": "家庭安防",
+        "pimgsrc": "https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp"
+    },
+
+    {
+        "pid": 2,
+        "pname": "路由器",
+        "pinfo": "安全路由",
+        "pimgsrc": "https://p4.ssl.qhimg.com/t01eced31e1fcaa88a5.webp"
+    },
+
+    {
+        "pid": 3,
+        "pname": "智能手表",
+        "pinfo": "智能手表",
+        "pimgsrc": "https://p2.ssl.qhimg.com/t01302f09dd5f95f197.webp"
+    },
+
+    {"pid": 4,
+        "pname": "主机",
+        "pinfo": "扫地机器人",
+        "pimgsrc": "https://p1.ssl.qhimg.com/t0174e15b118d375a36.webp"
+        
+    },
+
+    {
+        "pid": 5,
+        "pname": "记录仪",
+        "pinfo": "汽车用品",
+        "pimgsrc": "https://p0.ssl.qhimg.com/t01e702a604cb3fd77a.webp"
+    },
+
+    {
+        "pid": 6,
+        "pname": "云录卡",
+        "pinfo": "云录卡",
+        "pimgsrc": "https://p2.ssl.qhmsg.com/dr/180_180_/t01ca885c0d9f8d3d54.webp"
+    },
+
+    {
+        "pid": 7,
+        "pname": "储存卡",
+        "pinfo": "储存卡",
+        "pimgsrc": "https://p3.ssl.qhimg.com/t01b9d21e5df924ae5c.webp"
+    },
+
+    {
+        "pid": 8,
+        "pimgsrc": "../images/1.jpg",
+        "pa": "javascript:;"
+    },
+
+    {
+        "pid": 9,
+        "pimgsrc": "../images/2.jpg"
+
+    },
+
+    {
+        "pid": 10,
+        "pimgsrc": "../images/3.jpg"
+
+    },
+
+    {
+        "pid": 11,
+        "pimgsrc": "../images/4.jpg"
+
+    },
+
+    {
+        "pid": 12,
+        "pimgsrc": "../images/5.jpg"
+
+    },
+
+    {
+        "pid": 13,
+        "ptop": "新品",
+        "pgab": 629,
+        "pimgsrc": "../images/6.jpg",
+        "pname": "360可视门铃5MAX",
+        "pinfo": "2.5K双摄超大视野",
+        "price": 599,
+        "status":0
+    },
+
+    {
+        "pid": 14,
+        "ptop": "新品",
+        "pgab": 429,
+        "pimgsrc": "../images/7.jpg",
+        "pname": "360可视门铃5Pro AR1C",
+        "pinfo": "2K超清画质 166°超广视角",
+        "price": 399,
+        "status":1
+    },
+
+    {
+        "pid": 15,
+        "ptop": "新品",
+        "pgab": 199,
+        "pimgsrc": "../images/8.jpg",
+        "pname": "360智能摄像机小水滴5C 2K高清版AC1P",
+        "pinfo": "300万高清像素 130°人眼广角",
+        "price": 169,
+        "status":2
+    },
+
+    {
+        "pid": 16,
+        "ptop": "新品",
+        "pgab": 299,
+        "pimgsrc": "../images/9.jpg",
+        "pname": "360智能摄像机云台7P超清版",
+        "pinfo": "400万超清全景 一键呼叫家人 微光全彩夜视",
+        "price": 279,
+        "status":3
+    },
+
+    {
+        "pid": 17,
+        "ptop": "新品",
+        "pgab": 329,
+        "pimgsrc": "../images/10.jpg",
+        "pname": "360智能摄像机室外球机5C-无线畅联版AW4CA2",
+        "pinfo": "2K超清画质 双向云台旋转",
+        "price": 299,
+        "status":4
+    },
+
+    {
+        "pid": 18,
+        "ptop": "新品",
+        "pgab": 299,
+        "pimgsrc": "../images/11.jpg",
+        "pname": "360智能摄像机户外W4 Max",
+        "pinfo": "2.5K超清画质 智能全彩夜视",
+        "price": 269,
+        "status":5
+    },
+
+    {
+        "pid": 19,
+        "pimgsrc": "../images/12.jpg",
+        "pname": "360扫地机器人X100-边刷",
+        "price": 29,
+        "pl": "直降"
+    },
+
+    {
+        "pid": 20,
+        "pimgsrc": "../images/20.webp",
+        "pname": "360扫地机器人X100-边刷",
+        "price": 29,
+        "pl": "直降"
+    },
+
+    {
+        "pid": 21,
+        "pimgsrc": "../images/21.webp",
+        "pname": "360扫地机器人S8 Plus-尘盒过滤网",
+        "price": 39,
+        "pl": "直降"
+    },
+
+    {
+        "pid": 22,
+        "pimgsrc": "../images/22.webp",
+        "pname": "360 汽车应急启动电源D6",
+        "price": 189,
+        "pl": "直降"
+    },
+
+    {
+        "pid": 23,
+        "pimgsrc": "../images/23.jpg",
+        "pname": "360 儿童手表8XS 竹绿色",
+        "price": 329,
+        "pl": "直降"
+    },
+
+    {
+        "pid": 24,
+        "pimgsrc": "../images/mod-item.webp",
+        "pname": "360智能摄像机小水滴5C 2K高清版AC1P",
+        "price": 149,
+        "pl": "直降"
+    },
+
+    {
+        "pid": 25,
+        "pimgsrc": "../images/mod-item.webp",
+        "pname": "360智能摄像机小水滴5C 2K高清版AC1P",
+        "price": 149,
+        "pl": "直降"
+    },
+
+    {
+        "pid": 26,
+        "pimgsrc": "../images/mod-item.webp",
+        "pname": "360智能摄像机小水滴5C 2K高清版AC1P",
+        "price": 149,
+        "pl": "直降"
+    },
+
+    {
+        "pid": 27,
+        "pimgsrc": "../images/mod-item.webp",
+        "pname": "360智能摄像机小水滴5C 2K高清版AC1P",
+        "price": 149,
+        "pl": "直降"
+    },
+
+    {
+        "pid": 28,
+        "pimgsrc": "../images/mod-item.webp",
+        "pname": "360智能摄像机小水滴5C 2K高清版AC1P",
+        "price": 149,
+        "pl": "直降"
+    },
+
+    {
+        "pid": 29,
+        "pimgsrc": "../images/13.jpg"
+    },
+
+    {
+        "pid": 30,
+        "ptop": "新品",
+        "pgab": 299,
+        "pimgsrc": "../images/14.jpg",
+        "pname": "360 WiFi6 路由器V6G",
+        "pinfo": "AX1800跑满千兆宽带",
+        "price": 269
+    },
+
+    {
+        "pid": 31,
+        "ptop": "新品",
+        "pgab": 329,
+        "pimgsrc": "../images/15.jpg",
+        "pname": "单母装 360全屋路由Mesh 路由器V5M",
+        "pinfo": "一键拓展 快速组网",
+        "price": 279
+    },
+
+    {
+        "pid": 32,
+        "ptop": "新品",
+        "pgab": 66,
+        "pimgsrc": "../images/16.jpg",
+        "pname": "360 WiFi扩展器R2",
+        "pinfo": "信号死角终结者",
+        "price": 55
+    },
+
+    {
+        "pid": 33,
+        "ptop": "新品",
+        "pgab": 39.9,
+        "pimgsrc": "../images/17.jpg",
+        "pname": "360 随身WiFi 3 黑色",
+        "pinfo": "300Mbps芯片 双天线设计 信号双保险",
+        "price": 34.9
+    },
+
+    {
+        "pid": 34,
+        "ptop": "新品",
+        "pgab": 429,
+        "pimgsrc": "../images/18.jpg",
+        "pname": "360 家庭防火墙路由器T6GS",
+        "pinfo": "支持Mesh组网 全千兆网口",
+        "price": 399
+    },
+
+    {
+        "pid": 35,
+        "ptop": "新品",
+        "pgab": 429,
+        "pimgsrc": "../images/19.jpg",
+        "pname": "360 Wi-Fi 6路由器T6M",
+        "pinfo": "荣获iF国际工业设计奖",
+        "price": 399
+    },
+
+    {
+        "pid": 36,
+        "pimgsrc": "../images/24.jpg"
+    },
+
+    {
+        "pid": 37,
+        "ptop": "新品",
+        "pgab": 429,
+        "pimgsrc": "../images/25.jpg",
+        "pname": "360可视门铃5Pro AR1C",
+        "pinfo": "2K超清画质 166°超广视角",
+        "price": 399
+    },
+
+    {
+        "pid": 38,
+        "ptop": "新品",
+        "pgab": 429,
+        "pimgsrc": "../images/.jpg",
+        "pname": "360可视门铃5Pro AR1C",
+        "pinfo": "2K超清画质 166°超广视角",
+        "price": 399
+    },
+
+    {
+        "pid": 39,
+        "ptop": "新品",
+        "pgab": 429,
+        "pimgsrc": "../images/.jpg",
+        "pname": "360可视门铃5Pro AR1C",
+        "pinfo": "2K超清画质 166°超广视角",
+        "price": 399
+    },
+
+    {
+        "pid": 40,
+        "ptop": "新品",
+        "pgab": 429,
+        "pimgsrc": "../images/28.jpg",
+        "pname": "360可视门铃5Pro AR1C",
+        "pinfo": "2K超清画质 166°超广视角",
+        "price": 399
+    },
+
+    {
+        "pid": 41,
+        "ptop": "新品",
+        "pgab": 429,
+        "pimgsrc": "../images/29.jpg",
+        "pname": "360可视门铃5Pro AR1C",
+        "pinfo": "2K超清画质 166°超广视角",
+        "price": 399
+    },
+
+    {
+        "pid": 42,
+        "ptop": "新品",
+        "pgab": 429,
+        "pimgsrc": "../images/30.jpg",
+        "pname": "360可视门铃5Pro AR1C",
+        "pinfo": "2K超清画质 166°超广视角",
+        "price": 399
+    },
+
+    {
+        "pid": 43,
+        "pimgsrc": "../images/45.webp"
+    },
+
+    {
+        "pid": 44,
+        "ptop": "新品",
+        "pgab": 3429,
+        "pimgsrc": "../images/32.jpg",
+        "pname": "360手持洗地机 F100",
+        "pinfo": "吸拖洗消4合1 干湿垃圾一遍干净",
+        "price": 2799
+    },
+
+    {
+        "pid": 45,
+        "ptop": "新品",
+        "pgab": 2999,
+        "pimgsrc": "../images/33.jpg",
+        "pname": "360扫地机器人 S8 Plus集尘版",
+        "pinfo": "会自动倒垃圾的扫拖机器人",
+        "price": 2699
+    },
+
+    {
+        "pid": 46,
+        "ptop": "新品",
+        "pgab": 3299,
+        "pimgsrc": "../images/34.jpg",
+        "pname": "360 智能扫地机器人X100 MAX",
+        "pinfo": "三目激光雷达矩阵 隐藏雷达 超薄机身",
+        "price": 2799
+    },
+
+    {
+        "pid": 47,
+        "ptop": "新品",
+        "pgab": 2799,
+        "pimgsrc": "../images/35.jpg",
+        "pname": "360扫地机器人X95礼盒版",
+        "pinfo": "2650Pa大吸力 清扫省时高效",
+        "price": 1899
+    },
+
+    {
+        "pid": 48,
+        "ptop": "新品",
+        "pgab": 49,
+        "pimgsrc": "../images/36.jpg",
+        "pname": "360扫地机器人X100-可水洗拖布",
+        "pinfo": "拖布2片装",
+        "price": 39
+    },
+
+    {
+        "pid": 49,
+        "ptop": "新品",
+        "pgab": 3199,
+        "pimgsrc": "../images/31.jpg",
+        "pname": "360小章鱼拖地机器人",
+        "pinfo": "2K超清画质 166°超广视角",
+        "price": 2699
+    },
+
+    {
+        "pid": 50,
+        "pimgsrc": "../images/38.jpg"
+    },
+
+    {
+        "pid": 51,
+        "ptop": "新品",
+        "pgab": 399,
+        "pimgsrc": "../images/39.jpg",
+        "pname": "360 儿童手表9X",
+        "pinfo": "20米游泳级防水",
+        "price": 359
+    },
+
+    {
+        "pid": 52,
+        "ptop": "新品",
+        "pgab": 1099,
+        "pimgsrc": "../images/40.jpg",
+        "pname": "360 儿童手表Kido S2 ",
+        "pinfo": "500万超清前后双摄",
+        "price": 999
+    },
+
+    {
+        "pid": 53,
+        "ptop": "新品",
+        "pgab": 999,
+        "pimgsrc": "../images/41.jpg",
+        "pname": "360 儿童手表S1",
+        "pinfo": "十一重AI定位 200w+500w双摄像头",
+        "price": 598
+    },
+
+    {
+        "pid": 54,
+        "ptop": "新品",
+        "pgab": 999,
+        "pimgsrc": "../images/42.jpg",
+        "pname": "360 儿童手表M2",
+        "pinfo": "皮皮鲁安全特工队定制款",
+        "price": 799
+    },
+
+    {
+        "pid": 55,
+        "ptop": "新品",
+        "pgab": 299,
+        "pimgsrc": "../images/43.jpg",
+        "pname": "360 儿童手表Kido B2",
+        "pinfo": "双向通话 萌娃拍照",
+        "price": 269
+    },
+
+    {
+        "pid": 56,
+        "ptop": "新品",
+        "pgab": 429,
+        "pimgsrc": "../images/44.webp",
+        "pname": "360 儿童手表8XS",
+        "pinfo": "超强续航的4G视频电话手表",
+        "price": 399
+    },
+    {
+        "pid": 57,
+        "pgab": 199,
+        "pimgsrc": "../images/8.jpg",
+        "pname": "360智能摄像机小水滴5C 2K高清版AC1P",
+        "pinfo": "300万高清像素 130°人眼广角",
+        "price": 169,
+        "status": 0
+      },
+      {
+        "pid": 58,
+        "pgab": 299,
+        "pimgsrc": "../images/9.jpg",
+        "pname": "360智能摄像机云台7P超清版",
+        "pinfo": "400万超清全景 一键呼叫家人 微光全彩夜视",
+        "price": 279,
+        "status": 1
+      },
+      {
+        "pid": 59,
+        "pgab": 299,
+        "pimgsrc": "../images/14.jpg",
+        "pname": "360 WiFi6 路由器V6G",
+        "pinfo": "AX1800跑满千兆宽带",
+        "price": 269,
+        "status": 0
+      },
+      {
+        "pid": 60,
+        "pgab": 329,
+        "pimgsrc": "../images/15.jpg",
+        "pname": "单母装 360全屋路由Mesh 路由器V5M",
+        "pinfo": "一键拓展 快速组网",
+        "price": 279,
+        "status": 1
+      },
+      
+      {
+        "pid": 61,
+        "pgab": 399,
+        "pimgsrc": "../images/39.jpg",
+        "pname": "360 儿童手表9X",
+        "pinfo": "20米游泳级防水",
+        "price": 359,
+        "status": 0
+      },
+      {
+        "pid": 62,
+        "pgab": 1099,
+        "pimgsrc": "../images/40.jpg",
+        "pname": "360 儿童手表Kido S2 ",
+        "pinfo": "500万超清前后双摄",
+        "price": 999,
+        "status": 1
+      },
+      {
+        "pid": 63,
+        "pimgsrc": "../images/12.jpg",
+        "pname": "360扫地机器人X100-边刷",
+        "price": 29,
+        "status": 0
+      },
+      {
+        "pid": 64,
+        "pimgsrc": "../images/20.webp",
+        "pname": "360扫地机器人X100-边刷",
+        "price": 29,
+        "status": 1
+      }
+]

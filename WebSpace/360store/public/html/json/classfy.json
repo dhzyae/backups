@@ -1,0 +1,102 @@
+[
+  {
+    "fid": 1,
+    "Name": "家庭安防",
+    "name": "摄像机",
+    "img": "../images/8.jpg",
+    "products": [
+      {
+        "pid": 1,
+        "pgab": 199,
+        "pimgsrc": "../images/8.jpg",
+        "pname": "360智能摄像机小水滴5C 2K高清版AC1P",
+        "pinfo": "300万高清像素 130°人眼广角",
+        "price": 169,
+        "status": 0
+      },
+      {
+        "pid": 2,
+        "pgab": 299,
+        "pimgsrc": "../images/9.jpg",
+        "pname": "360智能摄像机云台7P超清版",
+        "pinfo": "400万超清全景 一键呼叫家人 微光全彩夜视",
+        "price": 279,
+        "status": 1
+      }
+    ]
+  },
+  {
+    "fid": 2,
+    "Name": "安全路由",
+    "name": "路由器",
+    "img": "../images/14.jpg",
+    "products": [
+      {
+        "pid": 1,
+        "pgab": 299,
+        "pimgsrc": "../images/14.jpg",
+        "pname": "360 WiFi6 路由器V6G",
+        "pinfo": "AX1800跑满千兆宽带",
+        "price": 269,
+        "status": 0
+      },
+      {
+        "pid": 2,
+        "pgab": 329,
+        "pimgsrc": "../images/15.jpg",
+        "pname": "单母装 360全屋路由Mesh 路由器V5M",
+        "pinfo": "一键拓展 快速组网",
+        "price": 279,
+        "status": 1
+      }
+    ]
+  },
+  {
+    "fid": 3,
+    "Name": "智能手表",
+    "name": "智能手表",
+    "img": "../images/39.jpg",
+    "products": [
+      {
+        "pid": 1,
+        "pgab": 399,
+        "pimgsrc": "../images/39.jpg",
+        "pname": "360 儿童手表9X",
+        "pinfo": "20米游泳级防水",
+        "price": 359,
+        "status": 0
+      },
+      {
+        "pid": 2,
+        "pgab": 1099,
+        "pimgsrc": "../images/40.jpg",
+        "pname": "360 儿童手表Kido S2 ",
+        "pinfo": "500万超清前后双摄",
+        "price": 999,
+        "status": 1
+      }
+    ]
+  },
+  {
+    "fid": 4,
+    "Name": "扫地机器人",
+    "name": "扫地机器人",
+    "img": "../images/12.jpg",
+    "products": [
+      {
+        "pid": 1,
+        "pimgsrc": "../images/12.jpg",
+        "pname": "360扫地机器人X100-边刷",
+        "price": 29,
+        "status": 0
+      },
+      {
+        "pid": 2,
+        "pimgsrc": "../images/20.webp",
+        "pname": "360扫地机器人X100-边刷",
+        "price": 29,
+        "status": 1
+      }
+    ]
+  }
+]
